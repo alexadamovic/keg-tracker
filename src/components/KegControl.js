@@ -58,7 +58,8 @@ class KegControl extends React.Component {
 
     if (this.state.selectedKeg != null) {
       currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} 
-        onClickingDelete = {this.handleDeletingKeg} />
+        onClickingDelete = {this.handleDeletingKeg} 
+        onClickingPourPint = {this.handlePouringPint} />
       buttonText = "Return to Keg List";
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <NewKegForm onNewKegCreation = {this.handleAddingNewKegToList}/>

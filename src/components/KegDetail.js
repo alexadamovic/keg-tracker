@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import kegImage from "./../img/keg.jpg";
 
 function KegDetail(props) {
-  const { keg, onClickingDelete } = props;
+  const { keg, onClickingDelete, onClickingPourPint } = props;
 
   const kegCardStyles = {
     backgroundColor: '#dfebf5',
@@ -29,14 +29,20 @@ function KegDetail(props) {
           </Card.Body>
         </Card>
         <button onClick={() => onClickingDelete(keg.id)}>Delete Keg</button>
+        <button onClick={() => onClickingPourPint(takeAPint(keg))}>Pour Pint</button>
       </Col>
     </React.Fragment>
   );
+
+  function takeAPint(keg) {
+    return ({name: "Test", brand: keg.brand.value, style: keg.style.value, price: keg.price.value, abv: keg.abv.value, pintsLeft: keg.pintsLeft.value - 1, id: keg.id.value})
+  }
 }
 
 KegDetail.propTypes = {
   keg: PropTypes.object,
-  onClickingDelete: PropTypes.func
+  onClickingDelete: PropTypes.func,
+  onClickingPourPint: PropTypes.func
 }
 
 export default KegDetail;
