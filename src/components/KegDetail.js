@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import kegImage from "./../img/keg.jpg";
 
-function KegDetail(props){
+function KegDetail(props) {
   const { keg, onClickingDelete } = props;
 
   const kegCardStyles = {
@@ -17,7 +18,7 @@ function KegDetail(props){
       <h1>Keg Detail</h1>
       <Col>
         <Card style={kegCardStyles}>
-          <Card.Img variant="top" src="../img/keg.jpg" />
+          <Card.Img variant="top" src={kegImage} />
           <Card.Body>
             <Card.Title>{keg.name} - {keg.brand}</Card.Title>
             <Card.Text>
@@ -26,7 +27,7 @@ function KegDetail(props){
             </Card.Text>
           </Card.Body>
         </Card>
-        <button onClick={()=> onClickingDelete(keg.id) }>Delete Keg</button>
+        <button onClick={() => onClickingDelete(keg.id)}>Delete Keg</button>
       </Col>
     </React.Fragment>
   );

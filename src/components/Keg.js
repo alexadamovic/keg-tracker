@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
+import kegImage from "./../img/keg.jpg";
 
 function Keg(props){
 
@@ -16,7 +17,7 @@ function Keg(props){
       <Col>
         <div onClick = {() => props.whenKegClicked(props.id)}>
           <Card style={kegCardStyles}>
-            <Card.Img variant="top" src="../img/keg.jpg" />
+            <Card.Img variant="top" src={kegImage} />
             <Card.Body>
               <Card.Title>{props.name} - {props.brand}</Card.Title>
               <Card.Text>
