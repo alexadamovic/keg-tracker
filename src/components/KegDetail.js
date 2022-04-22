@@ -6,6 +6,7 @@ import kegImage from "./../img/keg.jpg";
 
 function KegDetail(props) {
   const { keg, onClickingDelete, onClickingPourPint } = props;
+  console.log(keg);
 
   const kegCardStyles = {
     backgroundColor: '#dfebf5',
@@ -35,7 +36,7 @@ function KegDetail(props) {
   );
 
   function takeAPint(keg) {
-    return ({name: "Test", brand: keg.brand.value, style: keg.style.value, price: keg.price.value, abv: keg.abv.value, pintsLeft: keg.pintsLeft.value - 1, id: keg.id.value})
+    return ({name: keg.name, brand: keg.brand, style: keg.style, price: keg.price, abv: keg.abv, pintsLeft: keg.pintsLeft - 1, id: keg.id})
   }
 }
 
