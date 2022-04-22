@@ -2,7 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import kegImage from "./../img/keg.jpg";
+import full from "./../img/full.png";
+import threeQuarters from "./../img/three-quarters.png";
+import half from "./../img/half.png";
+import oneQuarter from "./../img/one-quarter.png";
+import empty from "./../img/empty.png";
 
 function Keg(props){
 
@@ -12,12 +16,26 @@ function Keg(props){
     border: 'solid 1px'
   }
 
+  function howMuchLeft() {
+    if (props.pintsLeft > 100) {
+      return full;
+    } else if (props.pintsLeft > 70) {
+      return threeQuarters;
+    } else if (props.pintsLeft > 40) {
+      return half;
+    } else if (props.pintsLeft > 10) {
+      return oneQuarter;
+    } else {
+      return empty;
+    }
+  }
+
   return (
     <React.Fragment>
       <Col>
         <div onClick = {() => props.whenKegClicked(props.id)}>
           <Card style={kegCardStyles}>
-            <Card.Img variant="top" src={kegImage} />
+            <Card.Img variant="top" src={howMuchLeft()} />
             <Card.Body>
               <Card.Title>{props.name} - {props.brand}</Card.Title>
               <Card.Text>
