@@ -5,8 +5,10 @@ function Header(){
 
   const headerStyles = {
     backgroundColor: '#ffef9e',
-    paddingTop: '3%',
-    paddingLeft: '2%'
+    paddingTop: '1%',
+    paddingBottom: '1%',
+    textAlign: 'center',
+    marginBottom: '2%'
   }
 
   return (

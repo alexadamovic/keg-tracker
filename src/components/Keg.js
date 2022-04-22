@@ -12,8 +12,9 @@ function Keg(props){
 
   const kegCardStyles = {
     backgroundColor: '#dfebf5',
-    width: '18rem',
-    border: 'solid 1px'
+    width: '16rem',
+    border: 'solid 1px',
+    margin: '2%'
   }
 
   function howMuchLeft() {
