@@ -2,6 +2,7 @@ import React from 'react';
 import NewKegForm from './NewKegForm';
 import KegList from './KegList';
 import KegDetail from './KegDetail';
+import Button from 'react-bootstrap/Button';
 
 class KegControl extends React.Component {
 
@@ -73,7 +74,9 @@ class KegControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <div style={{textAlign: "center"}}>
+          <Button variant="outline-dark" onClick={this.handleClick}>{buttonText}</Button>
+        </div>
       </React.Fragment>
     );
   }

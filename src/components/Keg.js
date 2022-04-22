@@ -32,7 +32,7 @@ function Keg(props){
   }
   
   const stock = () => {
-    if (props.pintsLeft == 0) {
+    if (props.pintsLeft === 0) {
       return "***OUT OF STOCK***";
     } else if (props.pintsLeft <= 10) {
       return "***LOW STOCK***";

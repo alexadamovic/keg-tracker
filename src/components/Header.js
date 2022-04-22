@@ -4,8 +4,11 @@ import './../index.css';
 function Header(){
 
   const headerStyles = {
+    fontFamily: 'Bebas Neue',
+    textIndent: '3rem',
+    letterSpacing: '3rem',
     backgroundColor: '#ffef9e',
-    paddingTop: '1%',
+    paddingTop: '2%',
     paddingBottom: '1%',
     textAlign: 'center',
     marginBottom: '2%'
@@ -13,7 +16,7 @@ function Header(){
 
   return (
     <div style={headerStyles}>
-      <h1>KEG TRACKER V1.0</h1>
+      <h1>TAPPER</h1>
     </div>
   );
 }
