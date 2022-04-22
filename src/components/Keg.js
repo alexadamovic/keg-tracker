@@ -30,6 +30,16 @@ function Keg(props){
       return empty;
     }
   }
+  
+  const stock = () => {
+    if (props.pintsLeft == 0) {
+      return "***OUT OF STOCK***";
+    } else if (props.pintsLeft <= 10) {
+      return "***LOW STOCK***";
+    } else {
+      return "Pints Left: " + props.pintsLeft;
+    }
+  }
 
   return (
     <React.Fragment>
@@ -42,7 +52,7 @@ function Keg(props){
               <Card.Text>
                 <p>{props.style} - <em>{props.abv}% abv</em></p>
                 <p><em>${props.price}</em></p>
-                <h5>Pints Left: {props.pintsLeft}</h5>
+                <h5>{stock()}</h5>
               </Card.Text>
             </Card.Body>
           </Card>
