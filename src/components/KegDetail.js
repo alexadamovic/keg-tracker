@@ -36,7 +36,11 @@ function KegDetail(props) {
   );
 
   function takeAPint(keg) {
-    return ({name: keg.name, brand: keg.brand, style: keg.style, price: keg.price, abv: keg.abv, pintsLeft: keg.pintsLeft - 1, id: keg.id})
+    if (keg.pintsLeft > 0) {
+      return ({name: keg.name, brand: keg.brand, style: keg.style, price: keg.price, abv: keg.abv, pintsLeft: keg.pintsLeft - 1, id: keg.id});
+    } else {
+      return (keg);
+    }
   }
 }
 
