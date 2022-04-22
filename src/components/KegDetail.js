@@ -24,6 +24,7 @@ function KegDetail(props) {
             <Card.Text>
               <p>{keg.style} - <em>{keg.abv}% abv</em></p>
               <p><em>${keg.price}</em></p>
+              <h5>Pints Left: {keg.pintsLeft}</h5>
             </Card.Text>
           </Card.Body>
         </Card>

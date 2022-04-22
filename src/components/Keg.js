@@ -23,6 +23,7 @@ function Keg(props){
               <Card.Text>
                 <p>{props.style} - <em>{props.abv}% abv</em></p>
                 <p><em>${props.price}</em></p>
+                <h5>Pints Left: {props.pintsLeft}</h5>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -38,6 +39,7 @@ Keg.propTypes = {
   style: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   abv: PropTypes.number.isRequired,
+  pintsLeft: PropTypes.number.isRequired,
   whenKegClicked: PropTypes.func
 };
 
