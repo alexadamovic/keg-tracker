@@ -38,8 +38,18 @@ class KegControl extends React.Component {
   }
 
   handleDeletingKeg = (id) => {
-    const newMainKegList = this.state.mainKegList.filter(ticket => ticket.id !== id);
+    const newMainKegList = this.state.mainKegList.filter(keg => keg.id !== id);
     this.setState({mainKegList: newMainKegList, selectedKeg: null});
+  }
+
+  handlePouringPint = (kegToPour) => {
+    const editedMainKegList = this.state.mainKegList
+      .filter(keg => keg.id !== this.state.selectedKeg.id)
+      .concat(kegToPour);
+    this.setState({
+        mainKegList: editedMainKegList,
+        selectedKeg: null
+      });
   }
 
   render(){
