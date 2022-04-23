@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Tapper: Components and State Management in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](/src/img/Logo.png)
+
+#### A JavaScript application built with React, Entity to integrate MySQL databases, and Identity for authentication/authorization
+
+
+
+
 
 ## Available Scripts
 
